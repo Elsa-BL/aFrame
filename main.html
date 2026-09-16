@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le labyrinthe</title>
      <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
 </head>
 <body>
@@ -13,11 +13,12 @@
 
       <a-asset>
 
-
+        <!-- texture -->
         <img id="mur" src="texture/imgMur1.jpg">
         <img id="sol" src="texture/sol.jpg">
         <img id="environnement" src="texture/environnement.jpg" >
 
+        <!-- model3D -->
         <a-asset-item id="spider" src="model3D/spider.gltf" > </a-asset-item>
         <a-asset-item id="spider2" src="model3D/spider2.gltf" > </a-asset-item>
         <a-asset-item id="spider3" src= "model3D/spider3.gltf"> </a-asset-item>
@@ -25,7 +26,7 @@
         <a-asset-item id="crane" src="model3D/crane.gltf"></a-asset-item>
         <a-asset-item id="web" src="model3D/web.gltf"></a-asset-item>
 
-        
+        <!-- musique -->
         <a-asset-item id="ambiance" src="musique/musiqueAmbiance.mp3"> </a-asset-item>
 
 
@@ -33,26 +34,32 @@
 
       <a-sky src="#environnement" color="#474747"> </a-sky>
       
+      <!-- sol/plafond -->
       <a-plane rotation="-90 0 90" width="4" height="4" material="src: #sol" color="grey" sound="src: #ambiance; autoplay: true"></a-plane>
       <a-plane position="0 2 0" rotation="90 0 90" width="4" height="4" material="src: #sol" color="#363636"></a-plane>
       
-      <a-box material="src: #mur" position="0.001 1 -1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
-      <a-box material="src: #mur" position="-0.997 1 0.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+
+      <!-- MURS -->
+      <a-box material="src: #mur" position="0.0 1 -1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+      <a-box material="src: #mur" position="-1 1 0.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
       <a-box material="src: #mur" position="0 1 0.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
-      <a-box material="src: #mur" position="-0.505 1 1" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-0.5 1 1" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="-2 1 1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
-      <a-box material="src: #mur" position="1.009 1 1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
+      <a-box material="src: #mur" position="1 1 1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
       <a-box material="src: #mur" position="0 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2" rotation="0 90 0"></a-box>
-      <a-box material="src: #mur" position="-1.479 1 0" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-1.5 1 0" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="-2 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
-      <a-box material="src: #mur" position="-0.492 1 2" depth="1" height="2" width="0.5" scale="0.125 1 2.982" rotation="0 90 0"></a-box>d"0 90 0"></a-box>
-      <a-box material="src: #mur" position="0 1 -1.972" depth="1" height="2" width="0.5" scale="0.125 1 4" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-0.5 1 2" depth="1" height="2" width="0.5" scale="0.125 1 2.982" rotation="0 90 0"></a-box>d"0 90 0"></a-box>
+      <a-box material="src: #mur" position="0 1 -2" depth="1" height="2" width="0.5" scale="0.125 1 4" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="2 1 0" depth="1" height="2" width="0.5" scale="0.125 1 4"></a-box>
 
+      <!-- camera -->
       <a-entity camera="" position="1.525 1.5 2.479" wasd-controls="acceleration:10" look-controls="" aframe-injected="">
         <a-entity light="color: #FFF; decay: 0.17; distance: 3; intensity:3; type: point" data-aframe-default-light="" aframe-injected="" position="0 0.142 0.029"></a-entity>
       </a-entity>
 
+
+      <!-- model3D -->
       <a-entity gltf-model="#spider" scale="0.02 0.02 0.02" position="1.927 0.585 -1.572" rotation="0 0 90"></a-entity>
       <a-entity 
       gltf-model="model3D/spider2.gltf" 
