@@ -6,6 +6,8 @@
     <title>Le labyrinthe</title>
      <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
 </head>
+
+    
 <body>
 
 
@@ -26,8 +28,6 @@
         <a-asset-item id="crane" src="model3D/crane.gltf"></a-asset-item>
         <a-asset-item id="web" src="model3D/web.gltf"></a-asset-item>
 
-        <!-- musique -->
-        <a-asset-item id="ambiance" src="./musique/musiqueAmbiance.mp3"> </a-asset-item>
 
 
       </a-asset>
@@ -62,7 +62,7 @@
       <!-- model3D -->
       <a-entity gltf-model="#spider" scale="0.02 0.02 0.02" position="1.927 0.585 -1.572" rotation="0 0 90"></a-entity>
       <a-entity 
-      gltf-model="model3D/spider2.gltf" 
+      gltf-model="#spider2" 
       scale="0.015 0.015 0.015" 
       position="-0.276 1.487 1.248" 
       rotation="90 39.984482857416616 0" 
@@ -71,14 +71,14 @@
 
 
       <a-entity 
-      gltf-model="model3D/spider3.gltf" 
+      gltf-model="#spider3" 
       scale="0.015 0.015 0.015" 
       position="0.786 1.536 -0.146" 
       rotation="0 59.67 0" 
       animation__3="dir: alternate; dur: 8500; loop: true; property: position; to: 0.786 1.2 -0.146"></a-entity>
 
       <a-entity 
-      gltf-model="model3D/ghost.gltf" 
+      gltf-model="#ghost" 
       scale="0.01 0.01 0.01" 
       position="-0.42 0.568 -2.512" 
       rotation="0 -37 0" 
@@ -86,10 +86,10 @@
       animation__4="dur: 2500; loop: true; property: position; to: -2.8 0.5 -0.4"
       
       ></a-entity>
-      <a-entity gltf-model="model3D/crane.gltf" scale="0.03 0.03 0.03" position="-0.264 0.075 -1.752" rotation="0 -57.03 0" material="opacity: 0.31"></a-entity>
+      <a-entity gltf-model="#crane" scale="0.03 0.03 0.03" position="-0.264 0.075 -1.752" rotation="0 -57.03 0" material="opacity: 0.31"></a-entity>
 
-     <a-entity gltf-model="model3D/web.gltf" scale="0.03 0.03 0.03" position="-0.685 1.559 0.718" rotation="-67.151 -162.80468529534333 121.9"></a-entity>
-     <a-entity gltf-model="model3D/web.gltf" scale="0.03 0.03 0.03" position="0.734 1.787 1.735" rotation="53.8007369627843 104.79398072942756 -134.8169691942827"></a-entity>
+     <a-entity gltf-model="#web" scale="0.03 0.03 0.03" position="-0.685 1.559 0.718" rotation="-67.151 -162.80468529534333 121.9"></a-entity>
+     <a-entity gltf-model="#web" scale="0.03 0.03 0.03" position="0.734 1.787 1.735" rotation="53.8007369627843 104.79398072942756 -134.8169691942827"></a-entity>
 
     </a-scene>
     
