@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+<body>
+
+
+    <a-scene background="color: #750000" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+
+      <a-asset>
+        <img id="mur" src="texture/imgMur1.jpg">
+        <img id="sol" src="texture/sol.jpg">
+        <img src="texture/environnement.png" id="environnement">
+
+        <a-asset-item id="spider" src="model3D/spider.gltf" > </a-asset-item>
+        <a-asset-item id="spider2" src="model3D/spider2.gltf" > </a-asset-item>
+        <a-asset-item id="spider3" src= "model3D/spider3.gltf"> </a-asset-item>
+        <a-asset-item id="ghost" src="model3D/ghost.gltf"></a-asset-item>
+        <a-asset-item id="crane" src="model3D/crane.gltf"></a-asset-item>
+        <a-asset-item id="web" src="model3D/web.gltf"></a-asset-item>
+
+
+      </a-asset>
+
+
+      
+      <a-plane rotation="-90 0 90" width="4" height="4" material="src: #sol" color="grey"></a-plane>
+      <a-plane position="0 2 0" rotation="90 0 90" width="4" height="4" material="src: #sol" color="#363636"></a-plane>
+      
+      <a-box material="src: #mur" position="0.001 1 -1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+      <a-box material="src: #mur" position="-0.997 1 0.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+      <a-box material="src: #mur" position="0 1 0.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+      <a-box material="src: #mur" position="-0.505 1 1" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-2 1 1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
+      <a-box material="src: #mur" position="1.009 1 1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
+      <a-box material="src: #mur" position="0 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-1.479 1 0" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-2 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
+      <a-box material="src: #mur" position="-0.492 1 2" depth="1" height="2" width="0.5" scale="0.125 1 2.982" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="0 1 -2" depth="1" height="2" width="0.5" scale="0.125 1 4" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="2 1 0" depth="1" height="2" width="0.5" scale="0.125 1 4"></a-box>
+
+      <a-entity camera="" position="1.525 1.5 2.479" wasd-controls="" look-controls="" aframe-injected="">
+        <a-entity light="color: #BBB; type: ambient" data-aframe-default-light="" aframe-injected=""></a-entity>
+      </a-entity>
+
+      <a-entity gltf-model="#spider" scale="0.02 0.02 0.02" position="1.927 0.585 -1.572" rotation="0 0 90"></a-entity>
+      <a-entity 
+      gltf-model="model3D/spider2.gltf" 
+      scale="0.015 0.015 0.015" 
+      position="-0.276 1.487 1.248" 
+      rotation="90 39.984482857416616 0" 
+      animation="dur: 2500; loop: true; property: rotation; to: 90 360 0" 
+      animation__2="dir: alternate; dur: 5000; loop: true; property: position; to: -0.276 1.0 1.248"></a-entity>
+
+
+      <a-entity 
+      gltf-model="model3D/spider3.gltf" 
+      scale="0.015 0.015 0.015" 
+      position="0.786 1.536 -0.146" 
+      rotation="0 59.67 0" 
+      animation__2="dir: alternate; dur: 8500; loop: true; property: position; to: 0.786 1.2 -0.146"></a-entity>
+
+      <a-entity 
+      gltf-model="model3D/ghost.gltf" 
+      scale="0.01 0.01 0.01" 
+      position="-0.42 0.568 -2.512" 
+      rotation="0 -37 0" 
+      material="opacity: 0.31"
+      animation__3="dur: 2500; loop: true; property: position; to: -2.8 0.5 -0.4"
+      
+      ></a-entity>
+      <a-entity gltf-model="model3D/crane.gltf" scale="0.03 0.03 0.03" position="-0.264 0.075 -1.752" rotation="0 -57.03 0" material="opacity: 0.31"></a-entity>
+
+     <a-entity gltf-model="model3D/web.gltf" scale="0.03 0.03 0.03" position="-0.685 1.559 0.718" rotation="-11.000789666511807 -108.80468529534333 57.52496263113465"></a-entity>
+     <a-entity gltf-model="model3D/web.gltf" scale="0.03 0.03 0.03" position="0.734 1.787 1.735" rotation="53.8007369627843 104.79398072942756 -134.8169691942827"></a-entity>
+
+    </a-scene>
+    
+</body>
+</html>
