@@ -6,4 +6,4 @@
 
 ### h3
 
-*[Le goat](https://www.youtube.com/c/cggeek)
+[Le goat](https://www.youtube.com/c/cggeek)
