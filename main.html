@@ -12,6 +12,8 @@
     <a-scene background="color: #750000" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="" light="defaultLightsEnabled: false" >
 
       <a-asset>
+
+
         <img id="mur" src="texture/imgMur1.jpg">
         <img id="sol" src="texture/sol.jpg">
         <img id="environnement" src="texture/environnement.jpg" >
@@ -23,12 +25,15 @@
         <a-asset-item id="crane" src="model3D/crane.gltf"></a-asset-item>
         <a-asset-item id="web" src="model3D/web.gltf"></a-asset-item>
 
+        
+        <a-asset-item id="ambiance" src="musique/musiqueAmbiance.mp3"> </a-asset-item>
+
 
       </a-asset>
-s
+
       <a-sky src="#environnement" color="#474747"> </a-sky>
       
-      <a-plane rotation="-90 0 90" width="4" height="4" material="src: #sol" color="grey"></a-plane>
+      <a-plane rotation="-90 0 90" width="4" height="4" material="src: #sol" color="grey" sound="src: #ambiance; autoplay: true"></a-plane>
       <a-plane position="0 2 0" rotation="90 0 90" width="4" height="4" material="src: #sol" color="#363636"></a-plane>
       
       <a-box material="src: #mur" position="0.001 1 -1.5" depth="1" height="2" width="0.5" scale="0.125 1 1"></a-box>
@@ -40,8 +45,8 @@ s
       <a-box material="src: #mur" position="0 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="-1.479 1 0" depth="1" height="2" width="0.5" scale="0.125 1 1" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="-2 1 -1" depth="1" height="2" width="0.5" scale="0.125 1 2"></a-box>
-      <a-box material="src: #mur" position="-0.492 1 2" depth="1" height="2" width="0.5" scale="0.125 1 2.982" rotation="0 90 0"></a-box>
-      <a-box material="src: #mur" position="0 1 -2" depth="1" height="2" width="0.5" scale="0.125 1 4" rotation="0 90 0"></a-box>
+      <a-box material="src: #mur" position="-0.492 1 2" depth="1" height="2" width="0.5" scale="0.125 1 2.982" rotation="0 90 0"></a-box>d"0 90 0"></a-box>
+      <a-box material="src: #mur" position="0 1 -1.972" depth="1" height="2" width="0.5" scale="0.125 1 4" rotation="0 90 0"></a-box>
       <a-box material="src: #mur" position="2 1 0" depth="1" height="2" width="0.5" scale="0.125 1 4"></a-box>
 
       <a-entity camera="" position="1.525 1.5 2.479" wasd-controls="acceleration:10" look-controls="" aframe-injected="">
